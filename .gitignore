@@ -1,0 +1,16 @@
+build
+3rdpart/.idea
+3rdpart/.vscode
+3rdpart/deformation/build/
+3rdpart/deformation/.idea
+
+3rdpart/points_cloud_to_mesh/build/
+3rdpart/points_cloud_to_mesh/.idea
+
+3rdpart/vrn-face-reconstruction/.idea
+3rdpart/vrn-face-reconstruction/.vscode
+
+
+
+
+
