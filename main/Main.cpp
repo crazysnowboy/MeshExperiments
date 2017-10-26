@@ -59,7 +59,15 @@ int myGUItest::Test2(void)
     string file_name = "data/current_merged.obj";
 //    string file_name = "data/head-reference2.obj";
 
-    mesh_.OpenMesh_.OpenMeshRead(file_name);
+//    mesh_.OpenMesh_.OpenMeshRead(file_name);
+
+//    Mesh tempMesh;
+//    tempMesh.OpenMesh_.Test();
+
+    mesh_.OpenMesh_.Test();
+
+    printf("n_face = %d \r\n",mesh_.OpenMesh_.n_faces());
+    printf("n_vertex = %d \r\n",mesh_.OpenMesh_.n_vertices());
 
 
 
