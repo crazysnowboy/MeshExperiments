@@ -6,6 +6,7 @@
 #define EXPERIMENTPROJECT_MESH_H
 
 #include "openmesh_wrap.h"
+#include "cgal_wrap.h"
 #include "myMesh_wrap.h"
 
 class Mesh
@@ -14,6 +15,8 @@ public:
     Mesh();
     ~Mesh();
     openmesh_wrap OpenMesh_;
+    cgal_wrap CgalMesh_;
+
     myMesh_wrap MyMesh_;
 
 };

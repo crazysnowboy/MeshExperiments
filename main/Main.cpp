@@ -18,7 +18,7 @@ public:
 
 //    string mode = "Solid Smooth";
 //    string mode = "Solid Colored Faces";
-    string mode = "Solid Flat";
+    string mode = "Points";
 
 
     myGUItest()
@@ -56,18 +56,26 @@ int myGUItest::Test2(void)
 
 //    string file_name = "/home/collin/Documents/MyProjects/AAAAAA/face/bs2dfitting/3rdpart/vrn-face-reconstruction/data/GeneratedData/face_mesh/yuhao.off";
 //    string file_name = "/home/collin/Documents/MyProjects/AAAAAA/face/bs2dfitting/3rdpart/vrn-face-reconstruction/data/GeneratedData/face_result_mesh/yuhao.obj";
-    string file_name = "data/current_merged.obj";
+//    string file_name = "data/current_merged.obj";
 //    string file_name = "data/head-reference2.obj";
+    string file_name = "data/lion-head.off";
 
 //    mesh_.OpenMesh_.OpenMeshRead(file_name);
 
 //    Mesh tempMesh;
 //    tempMesh.OpenMesh_.Test();
 
-    mesh_.OpenMesh_.Test();
+//    mesh_.OpenMesh_.Test();
+//d
+//    printf("n_face = %d \r\n",mesh_.OpenMesh_.n_faces());
+//    printf("n_vertex = %d \r\n",mesh_.OpenMesh_.n_vertices());
 
-    printf("n_face = %d \r\n",mesh_.OpenMesh_.n_faces());
-    printf("n_vertex = %d \r\n",mesh_.OpenMesh_.n_vertices());
+//    mesh_.CgalMesh_.read_off_points(file_name.c_str());
+    mesh_.CgalMesh_.read_off_poly(file_name.c_str());
+
+//    mesh_.CgalMesh_.TriangulatePoints();
+
+
 
 
 
@@ -94,8 +102,8 @@ void myGUItest::gui_run(void)
 //        RenderTool[myRender::Test]->Draw_gear_Test(1.f, 4.f, 1.f, 20, 0.7f);
 
 
-        mesh_.OpenMesh_.DrawOpenMesh(mode);
-
+//        mesh_.OpenMesh_.DrawOpenMesh(mode);
+        mesh_.CgalMesh_.DrawCGALMesh(mode);
 
 
         /////////////////////////

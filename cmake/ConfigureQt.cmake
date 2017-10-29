@@ -16,3 +16,8 @@ find_package(Qt5Xml REQUIRED)
 include_directories(${Qt5Xml_INCLUDE_DIRS})
 list(APPEND LIBRARIES Qt5::Xml)
 
+#--- Needed for the QGLViewer library
+find_package(Qt5Svg REQUIRED)
+include_directories(${Qt5Svg_INCLUDE_DIRS})
+list(APPEND LIBRARIES Qt5::Svg)
+

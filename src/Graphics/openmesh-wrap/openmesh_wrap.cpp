@@ -270,8 +270,11 @@ void openmesh_wrap::Test()
         std::cout << " moved to " << point( *v_it ) << std::endl;
     }
 
+
+
     std::cout << " delete face = " << fhandle[0] << std::endl;
-    delete_face(fhandle[0], true);
+//    delete_face(fhandle[0], true);
+    delete_vertex(vhandle[0], true);
 
     // Delete all elements that are marked as deleted from memory.
     garbage_collection();

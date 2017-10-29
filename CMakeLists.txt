@@ -13,9 +13,9 @@ include(cmake/ConfigureQt.cmake)
 set(INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include
         ${PROJECT_SOURCE_DIR}/include/glfw-3.1.2/include/GLFW
         ${PROJECT_SOURCE_DIR}/include/Graphics/pangolin-ui
-        ${PROJECT_SOURCE_DIR}/include/Blendshape
-        ${PROJECT_SOURCE_DIR}/include/libTracker
+        ${PROJECT_SOURCE_DIR}/include/Graphics/CGAL-wrap
         ${PROJECT_SOURCE_DIR}/include/Graphics
+        ${PROJECT_SOURCE_DIR}/include/Graphics/CGAL-wrap/Scale_space_reconstruction_3
         ${PROJECT_SOURCE_DIR}/include/Graphics/mymesh-wrap
         ${PROJECT_SOURCE_DIR}/include/Graphics/openmesh-wrap
         )

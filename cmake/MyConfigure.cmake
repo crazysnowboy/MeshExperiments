@@ -3,9 +3,12 @@ list(APPEND LIBRARIES  -lopenblas -lcurl) #for libTracker
 list(APPEND LIBRARIES
         -lOpenMeshTools
         -lOpenMeshCore
+        /usr/local/lib/libCGAL.so
+        -lCGAL -lgmp
         )
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 #set(DCMAKE_CXX_COMPILER g++-5)
 #set(CMAKE_C_COMPILER gcc-5)
 
