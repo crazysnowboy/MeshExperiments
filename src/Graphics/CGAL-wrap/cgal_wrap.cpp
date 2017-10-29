@@ -29,12 +29,33 @@ bool cgal_wrap::read_off_poly(const char * file_name)
         std::cerr << "Not a valid off file." << std::endl;
         return false;
     }
-    Polyhedron::Point_iterator it;
-    for (it = poly.points_begin(); it != poly.points_end(); ++it)
+    Polyhedron::Point_iterator p_it;
+    points.clear();
+    for (p_it = poly.points_begin(); p_it != poly.points_end(); ++p_it)
     {
-//        Point point_(it->x(),it->y(),it->z());
-//        points.push_back(point_);
-        std::cout << "points=" << *it <<std::endl;
+        Point point_(p_it->x(),p_it->y(),p_it->z());
+        points.push_back(point_);
+
+    }
+    Polyhedron::Face_iterator f_it;
+    for (f_it = poly.facets_begin(); f_it != poly.facets_end(); ++f_it)
+    {
+        Polyhedron::Halfedge_handle h = f_it->halfedge();
+
+        auto  p0 = h->vertex()->point();
+        h = h->next();
+        auto  p1 = h->vertex()->point();
+        h = h->next();
+        auto  p2 = h->vertex()->point();
+
+//        auto  p0 = h->face();
+//        h = h->next();
+//        auto  p1 = h->face();
+//        h = h->next();
+//        auto  p2 = h->face();
+
+
+        std::cout <<" "<<p0<<" " <<  p1<<" " << p2 <<" "<<std::endl;
     }
     return true;
 }

@@ -27,6 +27,7 @@ typedef CGAL::Delaunay_triangulation_3<K>   Delaunay3d;
 
 
 
+
 #include <Scale_space_surface_reconstruction_3.h>
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/IO/read_off_points.h>
@@ -78,6 +79,23 @@ typedef CGAL::Periodic_3_Delaunay_triangulation_3<Gt, TDS>               P3DT3;
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel Kernel;
 typedef CGAL::Polyhedron_3<Kernel>     Polyhedron;
+
+
+#include <CGAL/Simple_cartesian.h>
+#include <CGAL/Polyhedron_3.h>
+#include <CGAL/HalfedgeDS_vector.h>
+#include <CGAL/HalfedgeDS_list.h>
+#include <CGAL/HalfedgeDS_vertex_base.h>
+#include <CGAL/HalfedgeDS_halfedge_base.h>
+#include <CGAL/HalfedgeDS_face_base.h>
+#include <CGAL/IO/Polyhedron_iostream.h>
+#include <iostream>
+#include <fstream>
+//#include "performance_2.h"
+
+
+typedef CGAL::Simple_cartesian<double>  CGALKernel;
+typedef CGALKernel::Point_3             Point_3_;
 
 
 class cgal_wrap
